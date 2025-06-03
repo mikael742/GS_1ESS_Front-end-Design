@@ -138,10 +138,6 @@ footer {
   border-radius: 15px;
 }
 
-.slide.active {
-  display: block;
-}
-
 
 .slide.active {
   display: block;
@@ -218,3 +214,17 @@ footer {
     display: none;
   }
 }
+
+.hamburguer {
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.hamburguer:hover {
+  color: var(--cor-primaria);
+}
+
+
+
+/* Quando aberto, o nav fica visível */
+
