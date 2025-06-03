@@ -1,4 +1,9 @@
-/* Reset CSS */
+.noto-serif-dives-akuru-regular {
+  font-family: "Noto Serif Dives Akuru", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -226,7 +231,7 @@ footer {
   color: var(--cor-primaria);
 }
 
-/* Alternação de Cores */
+ /* Alternação de Cores */
 
 .troca-cor {
   position: fixed;
