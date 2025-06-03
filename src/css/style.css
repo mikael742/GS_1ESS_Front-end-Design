@@ -1,0 +1,131 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-primaria: #1e3a8a; /* azul escuro */
+  --cor-secundaria: #60a5fa; /* azul claro */
+  --cor-fundo-claro: #f4f8fc;
+  --cor-fundo-escuro: #e0edff;
+  --cor-texto: #1f2937;
+  --cor-branca: #ffffff;
+  --fonte-padrao: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--fonte-padrao);
+  background-color: var(--cor-fundo-claro);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+header.cabecalho {
+  background-color: var(--cor-branca);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: var(--cor-primaria);
+}
+
+.botao {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.botao:hover {
+  background-color: var(--cor-secundaria);
+}
+
+main section {
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.texto {
+  flex: 1 1 45%;
+}
+
+.texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--cor-primaria);
+}
+
+.texto p {
+  margin-bottom: 1rem;
+}
+
+.imagem {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.imagem img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bloco.roxo {
+  background-color: var(--cor-fundo-escuro);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .texto, .imagem {
+    flex: 1 1 100%;
+  }
+}
