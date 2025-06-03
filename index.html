@@ -11,6 +11,11 @@
   <header class="cabecalho">
     <div class="container">
       <h1>Alerta Rápido</h1>
+
+      <button id="btnHamburguer" class="hamburguer" aria-label="Abrir menu">
+      &#9776;
+      </button>
+      
       <nav>
         <ul class="menu">
           <li><a href="#problema">Início</a></li>
@@ -26,6 +31,15 @@
   </header>
 
   <main>
+    <section id="slideshow" class="bloco branco">
+    <div class="container slideshow-container">
+        <img src="./src/assets/img/enchente.jpeg" alt="Enchente em cidade" class="slide active">
+        <img src="./src/assets/img/enchente1.jpeg" alt="Sistema de alerta em uso" class="slide">
+        <img src="./src/assets/img/enchentes-no-brasil.jpg" alt="Comunidade em evacuação" class="slide">
+        <button id="nextSlide" class="slide-btn">→</button>
+    </div>
+    </section>
+
     <section id="problema" class="hero">
       <div class="container">
         <div class="texto">
@@ -105,6 +119,9 @@
       </div>
     </section>
   </main>
+
+  <script src="src/js/script.js"></script>
+
 
   <footer>
     <p>&copy; 2025 Alerta Rápido. Todos os direitos reservados.</p>

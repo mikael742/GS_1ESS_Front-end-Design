@@ -129,3 +129,92 @@ footer {
     flex: 1 1 100%;
   }
 }
+
+.slide {
+  display: none;
+  width: 100%;
+  height: min(50vw, 500px);
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.slide.active {
+  display: block;
+}
+
+
+.slide.active {
+  display: block;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background-color: rgba(30, 58, 138, 0.8); /* azul escuro translúcido */
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+}
+
+.slide-btn:hover {
+  background-color: var(--cor-secundaria);
+}
+
+/* Botão do menu hambúrguer - escondido no desktop */
+.hamburguer {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor-texto);
+}
+
+/* Quando em telas menores que 768px */
+@media (max-width: 768px) {
+  /* Mostrar botão */
+  .hamburguer {
+    display: block;
+  }
+
+  /* Esconder menu padrão */
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* Menu aberto - exibido verticalmente */
+  nav.menu-aberto {
+    display: block;
+    background-color: var(--cor-branca);
+    position: absolute;
+    top: 60px; /* ajusta conforme altura do header */
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  nav.menu-aberto ul.menu {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav.menu-aberto ul.menu li {
+    padding: 0.75rem 1rem;
+  }
+
+  nav.menu-aberto ul.menu li a {
+    display: block;
+  }
+
+  /* Esconder botão "Conecte-se" em mobile para ficar mais clean */
+  .botao {
+    display: none;
+  }
+}
