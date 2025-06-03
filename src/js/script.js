@@ -69,3 +69,15 @@ btnHamburguer.addEventListener('click', () => {
   }
 });
 */
+
+// Troca de cor de fundo
+document.addEventListener('DOMContentLoaded', () => {
+  const botoesDeCor = document.querySelectorAll('.cor-btn');
+
+  botoesDeCor.forEach(botao => {
+    botao.addEventListener('click', () => {
+      const corEscolhida = botao.getAttribute('data-cor');
+      document.body.style.backgroundColor = corEscolhida;
+    });
+  });
+});
