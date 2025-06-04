@@ -16,6 +16,7 @@
   --cor-texto: white;
   --cor-fundo: #eaf4fc;
   --cor-branca: #fff;
+  --fonte-padrao: 'Roboto', sans-serif;
 }
 
 body {
@@ -98,6 +99,31 @@ nav .menu li a:hover {
   text-decoration: none;
   font-weight: bold;
   margin-left: 1rem;
+}
+
+.botao:hover {
+  background-color: var(--cor-fundo);
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.texto {
+  flex: 1 1 45%;
+}
+
+.texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--cor-primaria);
 }
 
 /* QUIZ */

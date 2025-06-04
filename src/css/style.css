@@ -34,74 +34,6 @@ a{
   color: #fff;
   text-decoration: none;
 }
-/*
-header.cabecalho {
-  background-color: var(--cor-branca);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-header .container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-} */
-
-/*
-.menu {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-}
-
-.menu a {
-  text-decoration: none;
-  color: var(--cor-texto);
-  font-weight: 500;
-}
-
-.menu a:hover {
-  color: var(--cor-primaria);
-}
-*/
-
-/*
-nav {
-  display: flex;
-}
-
-nav .menu {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-nav .menu li a {
-  color: var(--cor-texto);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav .menu li a:hover {
-  color: #cce7ff;
-}
-
-.botao {
-  background-color: var(--cor-primaria);
-  color: var(--cor-branca);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: 700;
-}
-*/
 
 .cabecalho {
   width: 100%;
@@ -170,8 +102,24 @@ nav .menu li a:hover {
   margin-left: 1rem;
 }
 
+
 .botao:hover {
-  background-color: var(--cor-secundaria);
+  background-color: var(--cor-fundo-claro);
+}
+
+.botao1 {
+  background: var(--cor-branca);
+  color: var(--cor-primaria);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 1rem;
+  border-style: solid;
+}
+
+.botao1:hover {
+  background-color: var(--cor-fundo-claro);
 }
 
 main section {
@@ -179,7 +127,7 @@ main section {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -224,19 +172,8 @@ footer {
   font-size: 0.9rem;
   margin-top: 3rem;
 }
-/*
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .texto, .imagem {
-    flex: 1 1 100%;
-  }
-}
-*/
-/*SlideShow*/
 
+/*SlideShow*/
 .slide {
   display: none;
   width: 100%;
@@ -292,7 +229,6 @@ footer {
     display: block;
   }
 }
-
 
 .hamburguer:hover {
   color: var(--cor-branca);
@@ -352,7 +288,6 @@ footer {
 }
 
  /* Alternação de Cores */
-
 .troca-cor {
   position: fixed;
   bottom: 20px;
@@ -379,3 +314,65 @@ footer {
   transform: scale(1.2);
 }
 
+
+/* Estilo geral do formulário */
+#contato {
+  padding: 2rem;
+  background-color: var(--cor-branca);
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+}
+
+#contato h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--cor-primaria);
+}
+
+#formulario-contato input,
+#formulario-contato textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+  border: 2px solid var(--cor-primaria);
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+#formulario-contato input:focus,
+#formulario-contato textarea:focus {
+  border-color: var(--cor-secundaria);
+}
+
+.erro-validacao {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.erro-validacao.ativo {
+  display: block;
+}
+
+.btn {
+  background: var(--cor-branca);
+  color: var(--cor-primaria);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 1rem;
+  border-style: solid;
+  border-color: #1e3a8a;
+}
+
+.btn:hover {
+  background-color: var(--cor-fundo-claro);
+}

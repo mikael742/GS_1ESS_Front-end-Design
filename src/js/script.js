@@ -78,3 +78,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Formulário: 
+
+document.getElementById("formulario-contato").addEventListener("submit", function (e) {
+  e.preventDefault(); // evita envio automático
+  let nome = document.getElementById("nome");
+  let email = document.getElementById("email");
+  let mensagem = document.getElementById("mensagem");
+
+  let erroNome = document.getElementById("erro-nome");
+  let erroEmail = document.getElementById("erro-email");
+  let erroMensagem = document.getElementById("erro-mensagem");
+
+  let valido = true;
+
+  // Validação Nome
+  if (nome.value.trim() === "") {
+    erroNome.classList.add("ativo");
+    valido = false;
+  } else {
+    erroNome.classList.remove("ativo");
+  }
+
+  // Validação Email
+  if (email.value.trim() === "" || !email.value.includes("@")) {
+    erroEmail.classList.add("ativo");
+    valido = false;
+  } else {
+    erroEmail.classList.remove("ativo");
+  }
+
+  // Validação Mensagem
+  if (mensagem.value.trim() === "") {
+    erroMensagem.classList.add("ativo");
+    valido = false;
+  } else {
+    erroMensagem.classList.remove("ativo");
+  }
+
+  // Se tudo estiver válido
+  if (valido) {
+    alert("Mensagem enviada com sucesso!");
+    this.reset();
+  }
+});
+

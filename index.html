@@ -28,9 +28,7 @@
           <li><a href="#beneficios">Benefícios</a></li>
           <li><a href="#ajuda">Contato</a></li>
           <li><a href="src/pages/quizscript.html">Quiz</a></li>
-        </ul>
-      
-        
+        </ul>        
       </nav>
         <a href="src/pages/quizscript.html" class="botao">WebDev</a>
       
@@ -40,6 +38,7 @@
   <main>
     <section id="slideshow" class="bloco branco">
     <div class="container slideshow-container">
+        
         <img src="./src/assets/img/enchente.jpeg" alt="Enchente em cidade" class="slide active">
         <img src="./src/assets/img/Gustavo-Vara-Prefeitura-de-Pelotas.jpg" alt="Sistema de alerta em uso" class="slide">
         <img src="./src/assets/img/enchentes-no-brasil.jpg" alt="Comunidade em evacuação" class="slide">
@@ -53,7 +52,7 @@
           <h2>Alerta e Prevenção Contra Enchentes</h2>
           <p>Milhares vivem em áreas de risco sem acesso a alertas eficazes sobre enchentes. Nosso sistema é simples, rápido e acessível para todos.</p>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam esse qui reprehenderit, magnam optio est ex iure ducimus veniam quod?</p>
-          <a href="#ajuda" class="botao">Saiba Mais</a>
+          <a href="#ajuda" class="botao1">Saiba Mais</a>
         </div>
         <div class="imagem">
           <img src="src/assets/img/ENCHENTE.jpg" alt="Imagem ilustrativa de enchente">
@@ -129,11 +128,30 @@
 
   <script src="src/js/script.js"></script>
 
+    <section id="contato" class="secao">
+      <h2>Fale Conosco</h2>
+      <form id="formulario-contato">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Seu nome completo" required>
+        <span class="erro-validacao" id="erro-nome">Por favor, preencha seu nome.</span>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="seu@email.com" required>
+        <span class="erro-validacao" id="erro-email">Por favor, insira um e-mail válido.</span>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+        <span class="erro-validacao" id="erro-mensagem">A mensagem não pode estar vazia.</span>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+
 
   <footer>
-    
     <p>&copy; 2025 Alerta Rápido. Todos os direitos reservados.</p>
   </footer>
+
   <div class="troca-cor">
      <button class="cor-btn" data-cor="#f4f8fc" title="Fundo Claro">🌤️</button>
      <button class="cor-btn" data-cor="#5da0ac" title="Fundo Escuro Azul">🌑</button>
