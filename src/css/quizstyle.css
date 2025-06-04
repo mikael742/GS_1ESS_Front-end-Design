@@ -1,21 +1,107 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #eaf4fc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+/* RESET BÁSICO */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+:root {
+  --cor-primaria: #007acc;
+  --cor-secundaria: #005fa3;
+  --cor-texto: white;
+  --cor-fundo: #eaf4fc;
+  --cor-branca: #fff;
+}
+
+/* BODY */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--cor-fundo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+  width: 100%;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.cabecalho .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hamburguer {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor-texto);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.hamburguer:hover {
+  color: var(--cor-branca);
+}
+
+/* MENU */
+nav {
+  display: flex;
+}
+
+nav .menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav .menu li a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav .menu li a:hover {
+  color: #cce7ff;
+}
+
+.botao {
+  background: var(--cor-branca);
+  color: var(--cor-primaria);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+/* QUIZ */
 .quiz-container {
-  background: white;
+  background: var(--cor-branca);
   padding: 2rem;
+  margin-top: 2rem;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 90%;
   max-width: 600px;
   text-align: center;
+  z-index: 1;
 }
 
 .card {
@@ -29,8 +115,8 @@ body {
 }
 
 .btn {
-  background: #007acc;
-  color: white;
+  background: var(--cor-primaria);
+  color: var(--cor-branca);
   border: none;
   padding: 1rem;
   border-radius: 12px;
@@ -40,9 +126,50 @@ body {
 }
 
 .btn:hover {
-  background: #005fa3;
+  background: var(--cor-secundaria);
 }
 
 .hidden {
   display: none;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hamburguer {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.menu-aberto {
+    display: block;
+    background-color: var(--cor-primaria);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  nav.menu-aberto ul.menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav.menu-aberto ul.menu li {
+    padding: 0.75rem 1rem;
+  }
+
+  nav.menu-aberto ul.menu li a {
+    display: block;
+    color: var(--cor-texto);
+  }
+
+  .botao {
+    display: none;
+  }
 }

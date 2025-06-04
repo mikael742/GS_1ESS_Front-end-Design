@@ -194,7 +194,7 @@ footer {
   /* Menu aberto - exibido verticalmente */
   nav.menu-aberto {
     display: block;
-    background-color: var(--cor-branca);
+    background-color: #60a5fa;
     position: absolute;
     top: 60px; /* ajusta conforme altura do header */
     left: 0;
