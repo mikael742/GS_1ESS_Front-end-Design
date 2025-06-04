@@ -1,4 +1,5 @@
-/* Reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Dives+Akuru&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,65 +9,116 @@
 :root {
   --cor-primaria: #1e3a8a; /* azul escuro */
   --cor-secundaria: #60a5fa; /* azul claro */
-  --cor-fundo-claro: #f4f8fc;
-  --cor-fundo-escuro: #e0edff;
+  --cor-fundo-claro: #d9ecff;
+  --cor-fundo-escuro: #c7daf5;
   --cor-texto: #1f2937;
   --cor-branca: #ffffff;
   --fonte-padrao: 'Roboto', sans-serif;
 }
 
 body {
+  font-family: 'Segoe UI', sans-serif;
   font-family: var(--fonte-padrao);
+  display: flex;
   background-color: var(--cor-fundo-claro);
   color: var(--cor-texto);
+  flex-direction: column;
   line-height: 1.6;
 }
 
-header.cabecalho {
-  background-color: var(--cor-branca);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.cabecalho {
+  width: 100%;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
   padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
 }
 
-header .container {
-  max-width: 1200px;
-  margin: auto;
+.cabecalho .container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.menu {
+.hamburguer {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor-texto);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.hamburguer:hover {
+  color: var(--cor-branca);
+}
+
+/* MENU */
+nav {
   display: flex;
+}
+
+nav .menu {
   list-style: none;
+  display: flex;
   gap: 1rem;
 }
 
-.menu a {
-  text-decoration: none;
+nav .menu li a {
   color: var(--cor-texto);
-  font-weight: 500;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.menu a:hover {
-  color: var(--cor-primaria);
+nav .menu li a:hover {
+  color: #cce7ff;
 }
 
 .botao {
-  background-color: var(--cor-primaria);
-  color: var(--cor-branca);
+  background: var(--cor-branca);
+  color: var(--cor-primaria);
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: bold;
+  margin-left: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .botao:hover {
-  background-color: var(--cor-secundaria);
+  background-color: var(--cor-fundo-claro);
+  transform: scale(1.10);
+}
+
+.botao1 {
+  background: var(--cor-branca);
+  color: var(--cor-primaria);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border-style: solid;
+}
+
+.botao1:hover {
+  background-color: var(--cor-fundo-claro);
+  transform: scale(1.10);
 }
 
 main section {
@@ -105,6 +157,8 @@ main section {
 .imagem img {
   max-width: 100%;
   height: auto;
+  border-radius: 12px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .bloco.roxo {
@@ -120,12 +174,207 @@ footer {
   margin-top: 3rem;
 }
 
+/*SlideShow*/
+.slide {
+  display: none;
+  width: 100%;
+  height: min(50vw, 500px);
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background-color: rgba(30, 58, 138, 0.8); 
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+}
+
+.slide-btn:hover {
+  background-color: var(--cor-secundaria);
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Botão do menu hambúrguer - escondido no desktop */
+.hamburguer {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor-texto);
+  font-weight: bold;
+  transition: color 0.3s ease;
+  z-index: 1100;
+}
+
 @media (max-width: 768px) {
-  .container {
+  .hamburguer {
+    display: block;
+  }
+}
+
+.hamburguer:hover {
+  color: var(--cor-branca);
+}
+
+/* Quando em telas menores que 768px */
+@media (max-width: 768px) {
+  /* Mostrar botão */
+  .hamburguer {
+    display: block;
+  }
+
+  /* Esconder menu padrão */
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* Menu aberto - exibido verticalmente */
+  nav.menu-aberto {
+    display: block;
+    background-color: #60a5fa;
+    position: absolute;
+    top: 60px; /* ajusta conforme altura do header */
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  nav.menu-aberto ul.menu {
     flex-direction: column;
-    text-align: center;
+    gap: 0;
   }
-  .texto, .imagem {
-    flex: 1 1 100%;
+
+  nav.menu-aberto ul.menu li {
+    padding: 0.75rem 1rem;
   }
+
+  nav.menu-aberto ul.menu li a {
+    display: block;
+  }
+
+  /* Esconder botão "Conecte-se" em mobile para ficar mais clean */
+  .botao {
+    display: none;
+  }
+}
+
+.hamburguer {
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.hamburguer:hover {
+  color: var(--cor-primaria);
+}
+
+ /* Alternação de Cores */
+.troca-cor {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--cor-branca);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+
+.cor-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cor-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Estilo geral do formulário */
+#contato {
+  padding: 2rem;
+  background-color: var(--cor-branca);
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+}
+
+#contato h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--cor-primaria);
+}
+
+#formulario-contato input,
+#formulario-contato textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+  border: 2px solid var(--cor-primaria);
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+#formulario-contato input:focus,
+#formulario-contato textarea:focus {
+  border-color: var(--cor-secundaria);
+}
+
+.erro-validacao {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.erro-validacao.ativo {
+  display: block;
+}
+
+.btn {
+  background: var(--cor-branca);
+  color: var(--cor-primaria);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 1rem;
+  border-style: solid;
+  border-color: #1e3a8a;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--cor-fundo-claro);
+  transform: scale(1.10);
 }
