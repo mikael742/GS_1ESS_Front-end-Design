@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--/*<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -79,5 +79,79 @@
       }
     });
   </script>
+</body></html>
+</html> !-->
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Form Teste</title>
+  <style>
+    .ativo { color: red; display: block; }
+    .erro { display: none; }
+  </style>
+</head>
+<body>
+
+<form id="formulario-contato">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" />
+  <span id="erro-nome" class="erro">Nome obrigatório</span><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" />
+  <span id="erro-email" class="erro">Email obrigatório e deve conter @</span><br>
+
+  <label for="mensagem">Mensagem:</label>
+  <textarea id="mensagem"></textarea>
+  <span id="erro-mensagem" class="erro">Mensagem obrigatória</span><br>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<script>
+document.getElementById("formulario-contato").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let nome = document.getElementById("nome");
+  let email = document.getElementById("email");
+  let mensagem = document.getElementById("mensagem");
+
+  let erroNome = document.getElementById("erro-nome");
+  let erroEmail = document.getElementById("erro-email");
+  let erroMensagem = document.getElementById("erro-mensagem");
+
+  let valido = true;
+
+  if (nome.value.trim() === "") {
+    erroNome.classList.add("ativo");
+    valido = false;
+  } else {
+    erroNome.classList.remove("ativo");
+  }
+
+  if (email.value.trim() === "" || !email.value.includes("@")) {
+    erroEmail.classList.add("ativo");
+    valido = false;
+  } else {
+    erroEmail.classList.remove("ativo");
+  }
+
+  if (mensagem.value.trim() === "") {
+    erroMensagem.classList.add("ativo");
+    valido = false;
+  } else {
+    erroMensagem.classList.remove("ativo");
+  }
+
+  if (valido) {
+    alert("Mensagem enviada com sucesso!");
+    this.reset();
+  }
+});
+</script>
+
 </body>
 </html>

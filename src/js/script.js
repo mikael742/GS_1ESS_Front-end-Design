@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById("formulario-contato").addEventListener("submit", function (e) {
   e.preventDefault(); // evita envio automático
+
   let nome = document.getElementById("nome");
   let email = document.getElementById("email");
   let mensagem = document.getElementById("mensagem");
