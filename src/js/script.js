@@ -20,9 +20,9 @@ window.addEventListener('load', () => {
 });
 
 nextBtn.addEventListener('click', () => {
-  proximoSlide(); // troca manual
-  clearInterval(autoSlideInterval); // reseta autoplay
-  autoSlideInterval = setInterval(proximoSlide, 4000); // reinicia autoplay
+  proximoSlide(); 
+  clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(proximoSlide, 4000);
 });
 
 // Menu Hambúrguer  
@@ -30,13 +30,13 @@ const btnHamburguer = document.getElementById('btnHamburguer');
 const nav = document.querySelector('header nav');
 
 btnHamburguer.addEventListener('click', () => {
-  const aberto = nav.classList.toggle('menu-aberto'); // adiciona/remove a classe e retorna se está aberto
+  const aberto = nav.classList.toggle('menu-aberto'); 
 
   if (aberto) {
-    btnHamburguer.innerHTML = '&times;'; // mostra X
+    btnHamburguer.innerHTML = '&times;'; 
     btnHamburguer.setAttribute('aria-label', 'Fechar menu');
   } else {
-    btnHamburguer.innerHTML = '&#9776;'; // mostra hambúrguer
+    btnHamburguer.innerHTML = '&#9776;';
     btnHamburguer.setAttribute('aria-label', 'Abrir menu');
   }
 });
