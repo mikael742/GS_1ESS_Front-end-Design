@@ -26,32 +26,6 @@ nextBtn.addEventListener('click', () => {
 });
 
 // Menu Hambúrguer  
-
-/*
-const btnHamburguer = document.getElementById('btnHamburguer');
-const nav = document.querySelector('header nav');
-
-btnHamburguer.addEventListener('click', () => {
-  const aberto = nav.classList.toggle('menu-aberto'); // adiciona/remove a classe e retorna se está aberto
-
-  if (aberto) {
-    btnHamburguer.innerHTML = '&times;'; // mostra X
-    btnHamburguer.setAttribute('aria-label', 'Fechar menu');
-  } else {
-    btnHamburguer.innerHTML = '&#9776;'; // mostra hambúrguer
-    btnHamburguer.setAttribute('aria-label', 'Abrir menu');
-  }
-});
-
-  function toggleMenu() {
-    const menu = document.getElementById('menu');
-    const button = document.getElementById('hamburguer');
-    const isOpen = menu.classList.toggle('menu-aberto');
-
-    // Troca o ícone
-    button.textContent = isOpen ? '✖' : '☰';
-  }
-*/
 const btnHamburguer = document.getElementById('btnHamburguer');
 const nav = document.querySelector('header nav');
 
