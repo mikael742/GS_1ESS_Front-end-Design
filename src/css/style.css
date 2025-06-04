@@ -30,6 +30,10 @@ body {
   line-height: 1.6;
 }
 
+a{
+  color: #fff;
+  text-decoration: none;
+}
 /*
 header.cabecalho {
   background-color: var(--cor-branca);
@@ -111,7 +115,7 @@ nav .menu li a:hover {
 
 .cabecalho .container {
   width: 90%;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -175,7 +179,7 @@ main section {
 }
 
 .container {
-  max-width: 1600px;
+  max-width: 1400px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -241,7 +245,6 @@ footer {
   border-radius: 15px;
 }
 
-
 .slide.active {
   display: block;
 }
@@ -262,6 +265,13 @@ footer {
 
 .slide-btn:hover {
   background-color: var(--cor-secundaria);
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
 
 /* Botão do menu hambúrguer - escondido no desktop */
