@@ -99,3 +99,58 @@ document.getElementById("formulario-contato").addEventListener("submit", functio
   }
 });
 
+// Grau de Risco - Checagem 
+const dadosRisco = {
+  "itaim paulista": "alto",
+  "penha": "alto",
+  "são mateus": "alto",
+  "santana": "médio",
+  "tucuruvi": "médio",
+  "vila mariana": "baixo",
+  "morumbi": "médio",
+  "jardins": "baixo",
+  "pinheiros": "médio",
+  "centro": "alto",
+  "lapa": "médio",
+  "capão redondo": "alto",
+  "pirituba": "médio",
+  "mooca": "baixo",
+  "santo amaro": "médio",
+  "são paulo": "médio",
+  "barueri": "baixo",
+  "osasco": "médio",
+  "guarulhos": "alto",
+  "diadema": "médio",
+  "são bernardo do campo": "alto",
+  "são caetano do sul": "baixo",
+  "mauá": "alto"
+};
+
+function verificarRisco() {
+  const input = document.getElementById("local").value.trim().toLowerCase();
+  const resultado = document.getElementById("resultado");
+
+  if (!input) {
+    resultado.textContent = "Por favor, digite um local.";
+    resultado.className = "";
+    return;
+  }
+
+  const risco = dadosRisco[input];
+
+  if (risco === "alto") {
+    resultado.textContent = `⚠️ Risco ALTO de enchentes em ${input.charAt(0).toUpperCase() + input.slice(1)}.`;
+    resultado.className = "risco-alto";
+  } else if (risco === "médio") {
+    resultado.textContent = `⚠️ Risco MÉDIO de enchentes em ${input.charAt(0).toUpperCase() + input.slice(1)}.`;
+    resultado.className = "risco-medio";
+  } else if (risco === "baixo") {
+    resultado.textContent = `✅ Risco BAIXO de enchentes em ${input.charAt(0).toUpperCase() + input.slice(1)}.`;
+    resultado.className = "risco-baixo";
+  } else {
+    resultado.textContent = `❓ Local não encontrado na base.`;
+    resultado.className = "";
+  }
+}
+
+

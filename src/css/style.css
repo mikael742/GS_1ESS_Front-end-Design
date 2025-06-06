@@ -378,3 +378,85 @@ footer {
   background-color: var(--cor-fundo-claro);
   transform: scale(1.10);
 }
+
+/*Formulário de Grau de Risco*/
+
+.verificador-container {
+  max-width: 500px;
+  margin: 5rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.button2 {
+  padding: 0.7rem 1.5rem;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button2:hover {
+  background-color: #60a5fa;
+  transform: scale(1.10);
+}
+
+#resultado {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.risco-alto {
+  color: white;
+  background-color: #d84d4d;
+}
+
+.risco-medio {
+  color: black;
+  background-color: #e7c94e;
+}
+
+.risco-baixo {
+  color: white;
+  background-color: #66c789;
+}
+
+
+.formulario-duplo {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* força mesma altura */
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+
+.verificador-container,
+#contato {
+  flex: 1 1 500px; /* cresce igualmente, mínimo de 400px */
+  background-color: white;
+  min-height: 100%;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}

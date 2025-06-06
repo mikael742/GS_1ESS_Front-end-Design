@@ -123,33 +123,34 @@
       </div>
     </section>
   
+   <div class="formulario-duplo">
     <main class="verificador-container">
-    <h1>Verificação de Risco de Enchentes</h1>
-    <label for="local">Digite sua cidade ou bairro:</label>
-    <input type="text" id="local" placeholder="Ex: Itaim Paulista, São Paulo" />
-    <button onclick="verificarRisco()">Verificar</button>
-    <div id="resultado"></div>
-  </main>
-  </main>
-
+      <h1>Verificação de Risco de Enchentes</h1>
+      <label for="local">Digite sua cidade ou bairro:</label>
+      <input type="text" id="local" placeholder="Ex: Itaim Paulista, São Paulo" />
+      <button class="button2" onclick="verificarRisco()">Verificar</button>
+      <div id="resultado"></div>
+    </main>
+  
     <section id="contato" class="secao">
       <h2>Fale Conosco</h2>
       <form id="formulario-contato">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" placeholder="Seu nome completo" required>
         <span class="erro-validacao" id="erro-nome">Por favor, preencha seu nome.</span>
-
+      
         <label for="email">E-mail:</label>
         <input type="email" id="email" placeholder="seu@email.com" required>
         <span class="erro-validacao" id="erro-email">Por favor, insira um e-mail válido.</span>
-
+      
         <label for="mensagem">Mensagem:</label>
         <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
         <span class="erro-validacao" id="erro-mensagem">A mensagem não pode estar vazia.</span>
-
+      
         <button type="submit" class="btn">Enviar</button>
       </form>
     </section>
+  </div>
 
   <footer>
     <p>&copy; 2025 Alerta Rápido. Todos os direitos reservados.</p>
