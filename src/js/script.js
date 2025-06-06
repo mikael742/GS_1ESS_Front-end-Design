@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Formulário: 
 
 document.getElementById("formulario-contato").addEventListener("submit", function (e) {
-  e.preventDefault(); // evita envio automático
+  e.preventDefault(); 
 
   let nome = document.getElementById("nome");
   let email = document.getElementById("email");
